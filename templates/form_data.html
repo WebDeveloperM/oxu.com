@@ -1,0 +1,468 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> QABUL.OXU.UZ </title>
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token"
+        content="vXTJo93BN5mngzrU0ztiMlENcAW5zLeVCOlRSYijcmP0RKr3k4RO_cq6b-TrSAR0GnUoPdKI8ftP2TgHzc0gJQ==">
+
+    <script>var inputmask_5502d1cc = { "mask": "+\\9\\98 99 999-99-99" };</script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
+    <link rel="stylesheet" href="/assets/css/fonts.min.css" media="all">
+    <link rel="stylesheet" href="{% static 'css/oxu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.min.css' %}">
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://qabul.oxu.uz/web/img/logo.png" class="me-2" height="70" alt="MDB Logo" loading="lazy">
+                <small>OXU.UZ</small>
+            </a>
+            <h1 style="color: #0A5A97"> OSIYO XALQARO UNIVERSITETI </h1>
+        </div>
+    </nav>
+
+    <section class="background-radial-gradient overflow-hidden">
+        <style>
+            .background-radial-gradient {
+                background-color: hsl(218, 41%, 15%);
+                background-image: radial-gradient(650px circle at 0% 0%,
+                        hsl(218, 41%, 35%) 15%,
+                        hsl(218, 41%, 30%) 35%,
+                        hsl(218, 41%, 20%) 75%,
+                        hsl(218, 41%, 19%) 80%,
+                        transparent 100%),
+                    radial-gradient(1250px circle at 100% 100%,
+                        hsl(218, 41%, 45%) 15%,
+                        hsl(218, 41%, 30%) 35%,
+                        hsl(218, 41%, 20%) 75%,
+                        hsl(218, 41%, 19%) 80%,
+                        transparent 100%);
+            }
+
+            #radius-shape-1 {
+                height: 220px;
+                width: 220px;
+                top: -60px;
+                left: -130px;
+                background: radial-gradient(#44006b, #ad1fff);
+                overflow: hidden;
+            }
+
+            #radius-shape-2 {
+                border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                bottom: -60px;
+                right: -110px;
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(#44006b, #ad1fff);
+                overflow: hidden;
+            }
+
+            .bg-glass {
+                background-color: hsla(0, 0%, 100%, 0.9) !important;
+                backdrop-filter: saturate(200%) blur(25px);
+            }
+        </style>
+
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+            <div class="row gx-lg-5 align-items-center mb-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="z-index: 10">
+                    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                        Osiyo xalqaro universiteti <br>
+                        <span style="color: hsl(218, 81%, 75%)">qabul dasturiga xush kelibsiz!</span>
+                    </h1>
+
+                    <h3 class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                        Test sinovlariga qatnashish uchun shaxsiy ma'lumotlaringizni to'ldiring!
+                    </h3>
+                </div>
+
+                <div class="col-lg-7 mb-5 mb-lg-0 position-relative">
+                    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5 px-md-5">
+
+
+                            <form class="form-horizontal" action="{% url 'contract'  %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="_csrf"
+                                    value="SRjIZRZM-CUvJvUquZhyWp2xLVsQE0LwmDAGkf5JRBgRYp4iXwmWEB9sskv06ERqzYV0A3J8OoWvVj7LmgMWdw==">
+                                <h3> Telefon: <span style="color: red"> {{phone}} </span> </h3>
+                                <hr>
+
+                                <input type="text" name="first_phone" hidden value="{{phone}}">
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group field-hujjat2-familiya required">
+                                            <label class="control-label col-sm-12"
+                                                for="hujjat2-familiya">Familiya</label>
+                                            <div>
+                                                <input type="text" id="hujjat2-familiya" class="form-control"
+                                                    name="surename" placeholder="Familiya" aria-required="true">
+                                            </div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group field-hujjat2-ism required">
+                                            <label class="control-label col-sm-12" for="hujjat2-ism">Ism</label>
+                                            <div>
+                                                <input type="text" id="hujjat2-ism" class="form-control"
+                                                    name="firstname" placeholder="Ism" aria-required="true">
+                                            </div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group field-hujjat2-otasi_ism required">
+                                            <label class="control-label col-sm-12"
+                                                for="hujjat2-otasi_ism">Sharifi</label>
+                                            <div><input type="text" id="hujjat2-otasi_ism" class="form-control"
+                                                    name="father_name" placeholder="Sharifi" aria-required="true"></div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+
+                                        <div class="form-group field-hujjat2-telefon2">
+                                            <label class="control-label col-sm-12" for="hujjat2-telefon2">Qo'shimcha
+                                                telefon</label>
+                                            <div><input type="text" id="hujjat2-telefon2" class="form-control"
+                                                    name="second_phone" data-plugin-inputmask="inputmask_5502d1cc">
+                                            </div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group field-yoshi required">
+                                            <label class="control-label col-sm-12" for="yoshi">Yoshi</label>
+                                            <div>
+                                                <select class="form-control select2-hidden-accessible" name="age">
+                                                    <option value="" data-select2-id="2">Yoshi </option>
+                                                    <option value="18 gacha">18 gacha</option>
+                                                    <option value="19-25">19-25 </option>
+                                                    <option value="26-32">26-32</option>
+                                                    <option value="33+">33+</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--krajee-bs4"
+                                                    dir="ltr" data-select2-id="1" style="width: auto;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-yoshi-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-yoshi-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Yoshi
+                                                                </span></span><span class="select2-selection__arrow"
+                                                                role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="row">
+
+
+
+                                    <div class="col-md-6">
+
+                                        <div class="form-group field-hujjat2-ariza_turi required">
+
+                                            <div>
+                                                <select class="form-control select2-hidden-accessible"
+                                                    name="contract_type">
+                                                    <option value="" data-select2-id="4">Ariza turi </option>
+                                                    <option value="O'qishga kirish">O'qishga kirish</option>
+                                                    <option value="O'qishni 2-kursga ko'chirish">O'qishni 2-kursga
+                                                        ko'chirish</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--krajee-bs4"
+                                                    dir="ltr" data-select2-id="3" style="width: auto;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-hujjat2-ariza_turi-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-hujjat2-ariza_turi-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Ariza turi
+                                                                </span></span><span class="select2-selection__arrow"
+                                                                role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group field-talim_til required">
+
+                                            <div><select class="form-control select2-hidden-accessible"
+                                                    name="stady_lang">
+                                                    <option value="" data-select2-id="6">Ta'lim tili </option>
+                                                    <option value="O`zbek">O`zbek</option>
+                                                    <option value="Rus">Rus</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--krajee-bs4"
+                                                    dir="ltr" data-select2-id="5" style="width: auto;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-talim_til-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-talim_til-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Ta'lim tili
+                                                                </span></span><span class="select2-selection__arrow"
+                                                                role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group field-talim_turi required">
+
+                                            <div><select class="form-control select2-hidden-accessible"
+                                                    name="stady_type">
+                                                    <option value="" data-select2-id="8">Ta'lim turi </option>
+                                                    <option value="Bakalavr">Bakalavr</option>
+                                                    <option value="Magistr">Magistr</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--krajee-bs4"
+                                                    dir="ltr" data-select2-id="7" style="width: auto;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-talim_turi-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-talim_turi-container" role="textbox"
+                                                                aria-readonly="true"><span
+                                                                    class="select2-selection__placeholder">Ta'lim turi
+                                                                </span></span><span class="select2-selection__arrow"
+                                                                role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group field-talim_shakl required">
+
+                                            <div><select class="form-control select2-hidden-accessible"
+                                                    name="education_form">
+                                                    <option value="" data-select2-id="14">Ta'lim shakli</option>
+                                                    <option value="Kunduzgi">Kunduzgi</option>
+                                                    <option value="Kunduzgi (online)">Kunduzgi (online)</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--krajee-bs4"
+                                                    dir="ltr" data-select2-id="9" style="width: auto;"><span
+                                                        class="selection"><span
+                                                            class="select2-selection select2-selection--single"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-talim_shakl-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-talim_shakl-container" role="textbox"
+                                                                aria-readonly="true" title="Ta'lim shakli">Ta'lim
+                                                                shakli</span><span class="select2-selection__arrow"
+                                                                role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            <div style="color: red">
+                                                <p class="help-block help-block-error "></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!--                        -->
+                                <div class="form-group field-yunalish required">
+
+                                    <div>
+                                        <select class="form-control select2-hidden-accessible" name="direction">
+                                            <option value="" data-select2-id="19">Yo'nalish</option>
+                                            {% for direction in directions %}
+                                            <option value="{{direction}}">{{direction}}</option>
+                                            {% endfor %}
+                                        </select>
+
+                                        <span class="select2 select2-container select2-container--krajee-bs4" dir="ltr"
+                                            data-select2-id="11" style="width: auto;"><span class="selection"><span
+                                                    class="select2-selection select2-selection--single" role="combobox"
+                                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                    aria-disabled="false"
+                                                    aria-labelledby="select2-yunalish-container"><span
+                                                        class="select2-selection__rendered"
+                                                        id="select2-yunalish-container" role="textbox"
+                                                        aria-readonly="true"><span
+                                                            class="select2-selection__placeholder">Yo'nalish</span></span><span
+                                                        class="select2-selection__arrow" role="presentation"><b
+                                                            role="presentation"></b></span></span></span><span
+                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                    <div style="color: red">
+                                        <p class="help-block help-block-error "></p>
+                                    </div>
+                                </div>
+                                <!--                        -->
+
+
+                                <div class="form-group">
+                                    <div class="col-lg-offset-1 col-lg-11">
+                                        <button type="submit" class="btn btn-primary" name="login-button">Ro'yxatdan
+                                            o'tish</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="text-left text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+
+            <!-- Left -->
+
+            <!-- Right -->
+
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-left text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <!--                        <i class="fas fa-gem me-3"></i>Company name-->
+                        </h6>
+                        <p style="font-weight: bold">
+                            Osiyo xalqaro universiteti
+                        </p>
+                        <p>
+                            <i class="fas fa-phone me-3"></i>
+                            Telefon: +998 55 305 00 09
+                        </p>
+                        <p><i class="fas fa-home me-3"></i> Buxoro shahar, Yangiobod mfy, G`ijduvon ko'chasi, 74-uy.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-8 col-lg-7 col-xl-7 mx-auto mb-4">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;um=constructor%3A21f7deb6b7396fff26dfe0a546a7c82095b1ecce24c4b66d82892d1a29211a4e"
+                            frameborder="0" allowfullscreen="true" width="500px" height="240px"
+                            style="display: block;"></iframe>
+                    </div>
+                    <!-- Grid column -->
+
+
+
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: #3e5d94;">
+            <span style="color: white">© 2023</span>
+            <a style="color: white" class="text-reset fw-bold" href="https://oxu.uz/">oxu.uz</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.inputmask.bundle.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/webfont.min.js' %}"></script>
+    <script src="{% static 'js/yii.activeForm.js' %}"></script>
+    <script src="{% static 'js/yii.js' %}"></script>
+    <script src="{% static 'js/yii.validation.js' %}"></script>
+</body>
+
+</html>

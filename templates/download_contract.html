@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> QABUL.OXU.UZ </title>
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token"
+        content="vXTJo93BN5mngzrU0ztiMlENcAW5zLeVCOlRSYijcmP0RKr3k4RO_cq6b-TrSAR0GnUoPdKI8ftP2TgHzc0gJQ==">
+    <script src="https://unpkg.com/imask"></script>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" media="all">
+    <link rel="stylesheet" href="/assets/css/fonts.min.css" media="all">
+    <link rel="stylesheet" href="{% static 'css/oxu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.min.css' %}">
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://qabul.oxu.uz/web/img/logo.png" class="me-2" height="70" alt="MDB Logo" loading="lazy">
+                <small>OXU.UZ</small>
+            </a>
+            <h1 style="color: #0A5A97"> OSIYO XALQARO UNIVERSITETI </h1>
+        </div>
+    </nav>
+
+
+    <section class="background-radial-gradient overflow-hidden">
+        <style>
+            .background-radial-gradient {
+                background-color: hsl(218, 41%, 15%);
+                background-image: radial-gradient(650px circle at 0% 0%,
+                        hsl(218, 41%, 35%) 15%,
+                        hsl(218, 41%, 30%) 35%,
+                        hsl(218, 41%, 20%) 75%,
+                        hsl(218, 41%, 19%) 80%,
+                        transparent 100%),
+                    radial-gradient(1250px circle at 100% 100%,
+                        hsl(218, 41%, 45%) 15%,
+                        hsl(218, 41%, 30%) 35%,
+                        hsl(218, 41%, 20%) 75%,
+                        hsl(218, 41%, 19%) 80%,
+                        transparent 100%);
+            }
+
+            #radius-shape-1 {
+                height: 220px;
+                width: 220px;
+                top: -60px;
+                left: -130px;
+                background: radial-gradient(#44006b, #ad1fff);
+                overflow: hidden;
+            }
+
+            #radius-shape-2 {
+                border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+                bottom: -60px;
+                right: -110px;
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(#44006b, #ad1fff);
+                overflow: hidden;
+            }
+
+            .bg-glass {
+                background-color: hsla(0, 0%, 100%, 0.9) !important;
+                backdrop-filter: saturate(200%) blur(25px);
+            }
+        </style>
+
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start ">
+            <div class="row gx-lg-5 align-items-center mb-5">
+                <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                        SHARTNOMANI YUKLAB OLISH OYNASI <br>
+                        <span style="color: hsl(218, 81%, 75%)"></span>
+                    </h1>
+                    <!--                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">-->
+                    <!--                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.-->
+                    <!--                    Temporibus, expedita iusto veniam atque, magni tempora mollitia-->
+                    <!--                    dolorum consequatur nulla, neque debitis eos reprehenderit quasi-->
+                    <!--                    ab ipsum nisi dolorem modi. Quos?-->
+                    <!--                </p>-->
+                </div>
+
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5 px-md-5">
+
+
+
+                            <form id="login-form" class="form-horizontal" action="{% url 'download-contract' %}"
+                                method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="_csrf"
+                                    value="OZfMDzsvootMu8-PJ0QW--kvq_9JYyGA70eKjHpD6YYIxvR8DVvP2ijw96J0AH-QqlnMhn4qGereCrrfFxGL6g==">
+                                <h4 style="color: blue">Telefon raqamingizni kiriting: </h4>
+
+
+                                <!--                        -->
+                                <div class="form-group field-telefon-telefon required has-error">
+
+                                    <div>
+                                        <input type="text" id="phone-mask" class="form-control" name="phone"
+                                            aria-required="true" data-plugin-inputmask="inputmask_5502d1cc"
+                                            aria-invalid="true">
+                                    </div>
+                                    <div style="color: red">
+                                        {% if messages %}
+                                        <ul class="messages" style="display: block; margin-right: 35px;">
+                                            {% for message in messages %}
+                                            {% if message.tags == 'warning' %}
+                                            <li class="{{ message.tags }} mt-2"
+                                                style="color: blue; font-size: 15px; list-style: none;">
+                                                {{ message|safe }}
+                                            </li>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </ul>
+
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                {% if messages %}
+                                <ul class="messages" style="display: block; margin-right: 35px;">
+                                    {% for message in messages %}
+                                    {% if message.tags == 'error' %}
+                                    <li class="{{ message.tags }} mt-2"
+                                        style="color: rgb(255, 0, 0); font-size: 15px; list-style: none;">
+                                        {{ message|safe }}
+                                    </li>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                                <div class="form-group">
+                                    <div class="col-lg-offset-1 col-lg-11">
+                                        <a href="{% url 'acceptance' %}" type="submit" class="btn btn-info" name="login-button">Kirish /
+                                            Ro`yatdan o`tish</a>
+                                    </div>
+                                </div>
+
+                                {% else %}
+                                <div class="form-group">
+                                    <div class="col-lg-offset-1 col-lg-11">
+                                        <button type="submit" class="btn btn-warning" name="login-button">Shartnomani
+                                            yuklab olish</button>
+                                    </div>
+                                </div>
+
+                                {% endif %}
+
+
+                            </form>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-left text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+
+            <!-- Left -->
+
+            <!-- Right -->
+
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-left text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <!--                        <i class="fas fa-gem me-3"></i>Company name-->
+                        </h6>
+                        <p style="font-weight: bold">
+                            Osiyo xalqaro universiteti
+                        </p>
+                        <p>
+                            <i class="fas fa-phone me-3"></i>
+                            Telefon: +998 55 305 00 09
+                        </p>
+                        <p><i class="fas fa-home me-3"></i> Buxoro shahar, Yangiobod mfy, G`ijduvon ko'chasi, 74-uy.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-8 col-lg-7 col-xl-7 mx-auto mb-4">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;um=constructor%3A21f7deb6b7396fff26dfe0a546a7c82095b1ecce24c4b66d82892d1a29211a4e"
+                            frameborder="0" allowfullscreen="true" width="500px" height="240px"
+                            style="display: block;"></iframe>
+                    </div>
+                    <!-- Grid column -->
+
+
+
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: #3e5d94;">
+            <span style="color: white">© 2023</span>
+            <a style="color: white" class="text-reset fw-bold" href="https://oxu.uz/">oxu.uz</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.inputmask.bundle.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/webfont.min.js' %}"></script>
+    <script src="{% static 'js/yii.activeForm.js' %}"></script>
+    <script src="{% static 'js/yii.js' %}"></script>
+    <script src="{% static 'js/yii.validation.js' %}"></script>
+    <script>
+        IMask(
+            document.getElementById('phone-mask'),
+            {
+                mask: '+{998} (00) 000-00-00'
+            }
+        )
+    </script>
+</body>
+
+</html>
